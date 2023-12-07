@@ -5,21 +5,21 @@
 class Tlc3 < Formula
   desc "TLS cert checker CLI"
   homepage "https://github.com/nekrassov01/tlc3"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.4/tlc3_Darwin_arm64.tar.gz"
-      sha256 "5fcb03be7d20e4ee9578b7756daf2134798d7b685ec02daa71f10a840efaffb8"
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.5/tlc3_Darwin_arm64.tar.gz"
+      sha256 "96b3b6ec41e078950a863870afffc94fdf1d0db5430564d67fc318e0f7d689ff"
 
       def install
         bin.install "tlc3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.4/tlc3_Darwin_x86_64.tar.gz"
-      sha256 "c0e606a50c5a3feccd3371c540f690d137169a9f669159819be80224931f53b3"
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.5/tlc3_Darwin_x86_64.tar.gz"
+      sha256 "0a481f1cd5bd62788bafc01c61429afb0f738786fb8e8e6adfe3afa040e7e1e4"
 
       def install
         bin.install "tlc3"
@@ -29,16 +29,16 @@ class Tlc3 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.4/tlc3_Linux_arm64.tar.gz"
-      sha256 "b5aa236004704a88a49a64b21550d1dc19252e4c8c9ec5adf31c2143bc4b1107"
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.5/tlc3_Linux_arm64.tar.gz"
+      sha256 "d15fe2dba105f1e46532f0e59f90f704e0467b8650dcbeffb1e4bd11fffb7765"
 
       def install
         bin.install "tlc3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.4/tlc3_Linux_x86_64.tar.gz"
-      sha256 "91456b6654eba49abdd7e423fea5e8ab924356a9c74281af7e57be51765c2824"
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.5/tlc3_Linux_x86_64.tar.gz"
+      sha256 "f718a43667271e7dd05fe11e38b1bea6010ce3ba550867305ebde2770c4bd87a"
 
       def install
         bin.install "tlc3"

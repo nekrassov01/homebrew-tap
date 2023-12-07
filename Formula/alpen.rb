@@ -5,21 +5,21 @@
 class Alpen < Formula
   desc "Access log parser/encoder CLI"
   homepage "https://github.com/nekrassov01/alpen"
-  version "0.0.16"
+  version "0.0.17"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.16/alpen_Darwin_x86_64.tar.gz"
-      sha256 "25a83ccc9da8aff0937413880fb1e260f9799cba3f1084f75c9774d3c787272b"
+    if Hardware::CPU.arm?
+      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.17/alpen_Darwin_arm64.tar.gz"
+      sha256 "cb9e2ceb5719c825179c655a8ae4ba6f0149be39df5cc898024c1684ce157219"
 
       def install
         bin.install "alpen"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.16/alpen_Darwin_arm64.tar.gz"
-      sha256 "cae79b94f6926bea5defc7561cdffa4c7e8aff8470da9b181bc33824565448fc"
+    if Hardware::CPU.intel?
+      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.17/alpen_Darwin_x86_64.tar.gz"
+      sha256 "73da0374f7adb7a08b8620de893f1011827108f5ea202e4dc03ed6f350823797"
 
       def install
         bin.install "alpen"
@@ -28,17 +28,17 @@ class Alpen < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.16/alpen_Linux_x86_64.tar.gz"
-      sha256 "b0b071df1dc069e501458ead6b30aa10caa66f02ecc1f9c401be0a01942bec01"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.17/alpen_Linux_arm64.tar.gz"
+      sha256 "ec4af76b836f0acf7e932497c5a12653d481cb12d5cfcc40c7478b37f8764f06"
 
       def install
         bin.install "alpen"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.16/alpen_Linux_arm64.tar.gz"
-      sha256 "c05f8d8403d13599e8a97bf710750928b2a224b4eebfe0f917f64eb288f4708b"
+    if Hardware::CPU.intel?
+      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.17/alpen_Linux_x86_64.tar.gz"
+      sha256 "d1d763d020cdaa8f568fd1d93d9435c795bcc945b7e3d65c824fbee47c8be571"
 
       def install
         bin.install "alpen"

@@ -5,21 +5,21 @@
 class Tlc3 < Formula
   desc "TLS cert checker CLI"
   homepage "https://github.com/nekrassov01/tlc3"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.7/tlc3_Darwin_arm64.tar.gz"
-      sha256 "7a9c728952a8670add7fed5e435f3473b6abd8fb6fde6da549b12422908b62a9"
+    if Hardware::CPU.intel?
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.8/tlc3_Darwin_x86_64.tar.gz"
+      sha256 "36e2d9b02f937fafa62333defb6de57bbe62145e7f1e10ec4a972fb410e8d7cd"
 
       def install
         bin.install "tlc3"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.7/tlc3_Darwin_x86_64.tar.gz"
-      sha256 "b8e85357afa481d228dd98062e0e2b9b1f1a99117a494863a4f00d9b59953aa9"
+    if Hardware::CPU.arm?
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.8/tlc3_Darwin_arm64.tar.gz"
+      sha256 "f9b7089e9ab27d576f1e074e011b62a7b956fe4a0387e3b468a86e8ed562e18b"
 
       def install
         bin.install "tlc3"
@@ -29,16 +29,16 @@ class Tlc3 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.7/tlc3_Linux_arm64.tar.gz"
-      sha256 "546c6e656ffe8d071611215d792be230804688aa9b99b62e7202adfa12a8fe99"
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.8/tlc3_Linux_arm64.tar.gz"
+      sha256 "9f094f474479b3eb18cfff1734754ef9da3b929cb951c7519db17f212b631467"
 
       def install
         bin.install "tlc3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.7/tlc3_Linux_x86_64.tar.gz"
-      sha256 "6b2efe35a3773fc87aea5c2be38456fcfc406ea28a188ded42fce1fa1c47a16f"
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.8/tlc3_Linux_x86_64.tar.gz"
+      sha256 "8490ef5988884f005864bbdd909f77c12b71b6158829dc8b811ee6460cd5f262"
 
       def install
         bin.install "tlc3"

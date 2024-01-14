@@ -5,21 +5,21 @@
 class Tlc3 < Formula
   desc "TLS cert checker CLI"
   homepage "https://github.com/nekrassov01/tlc3"
-  version "0.0.8"
+  version "0.0.9"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.8/tlc3_Darwin_x86_64.tar.gz"
-      sha256 "36e2d9b02f937fafa62333defb6de57bbe62145e7f1e10ec4a972fb410e8d7cd"
+    if Hardware::CPU.arm?
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.9/tlc3_Darwin_arm64.tar.gz"
+      sha256 "dffcae0f9f718935fd2455df9e199f297ed48d887d32ffcb7a1fc4461d35d394"
 
       def install
         bin.install "tlc3"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.8/tlc3_Darwin_arm64.tar.gz"
-      sha256 "f9b7089e9ab27d576f1e074e011b62a7b956fe4a0387e3b468a86e8ed562e18b"
+    if Hardware::CPU.intel?
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.9/tlc3_Darwin_x86_64.tar.gz"
+      sha256 "2de201f689c5c17e9d94550b20a5fed91305c7b6bfe4f2ae6d3018617ab4a975"
 
       def install
         bin.install "tlc3"
@@ -28,17 +28,17 @@ class Tlc3 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.8/tlc3_Linux_arm64.tar.gz"
-      sha256 "9f094f474479b3eb18cfff1734754ef9da3b929cb951c7519db17f212b631467"
+    if Hardware::CPU.intel?
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.9/tlc3_Linux_x86_64.tar.gz"
+      sha256 "a12e12e2e61ab2b5760e5df4bbbd12c3241c88177c242a85ab1efb4addf52c7e"
 
       def install
         bin.install "tlc3"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.8/tlc3_Linux_x86_64.tar.gz"
-      sha256 "8490ef5988884f005864bbdd909f77c12b71b6158829dc8b811ee6460cd5f262"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.9/tlc3_Linux_arm64.tar.gz"
+      sha256 "eeb5c037d9e882a6c9ae70b8ef6b4a0fd781fa01d75063e093d2f7d5d0829cbe"
 
       def install
         bin.install "tlc3"

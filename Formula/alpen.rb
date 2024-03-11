@@ -5,21 +5,21 @@
 class Alpen < Formula
   desc "Access log parser/encoder CLI"
   homepage "https://github.com/nekrassov01/alpen"
-  version "0.0.18"
+  version "0.0.20"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.18/alpen_Darwin_arm64.tar.gz"
-      sha256 "cfabeff470dc31da917762f01ca752f3644aed79dc85586c850fab9db95c1454"
+      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.20/alpen_Darwin_arm64.tar.gz"
+      sha256 "6df93da2defddaa0047eb4a5144dca0a02afbc5bc1686fa878cd63d336f0fb13"
 
       def install
         bin.install "alpen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.18/alpen_Darwin_x86_64.tar.gz"
-      sha256 "99b28f0c1eef10f80859fbea7f8e9d05fa0a058eaa320df5eeb7223e2dc5ea47"
+      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.20/alpen_Darwin_x86_64.tar.gz"
+      sha256 "e0c0a0da29de497f7bed3947f1de878672524933296baae13df2a324d1821406"
 
       def install
         bin.install "alpen"
@@ -29,16 +29,16 @@ class Alpen < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.18/alpen_Linux_arm64.tar.gz"
-      sha256 "eb67742d34f54a3595c1b5d0a432a44c2780a96abd8a4aaca1e0371c38b8e03c"
+      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.20/alpen_Linux_arm64.tar.gz"
+      sha256 "a9bb94d7371ba8687f016967867538e7c16ae9044516d7a500909b45a4d9646b"
 
       def install
         bin.install "alpen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.18/alpen_Linux_x86_64.tar.gz"
-      sha256 "62a0d7a0230a2e06ef6e1cecbb6ac8751a55942f5bd6239870cd3ccc5a079bc5"
+      url "https://github.com/nekrassov01/alpen/releases/download/v0.0.20/alpen_Linux_x86_64.tar.gz"
+      sha256 "7268fe9717c57a0bfc71b34e7d2bbfe52ae84314a37824c0812a44d4b176dc60"
 
       def install
         bin.install "alpen"

@@ -5,21 +5,21 @@
 class Tlc3 < Formula
   desc "TLS cert checker CLI"
   homepage "https://github.com/nekrassov01/tlc3"
-  version "0.0.12"
+  version "0.0.14"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.12/tlc3_Darwin_arm64.tar.gz"
-      sha256 "74913c2be74e6bf8dd9a55d5c4c1c02b40570547a0d5e1378b967e61979a45f9"
+    on_intel do
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.14/tlc3_Darwin_x86_64.tar.gz"
+      sha256 "938989bac368aee2d748a982d2120cad2c70f5c5d3266ceb5eda434dcabfaefd"
 
       def install
         bin.install "tlc3"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.12/tlc3_Darwin_x86_64.tar.gz"
-      sha256 "d005dc8be101e296038c52fc21376d2f10d7e098491633853ee50b2059d328fc"
+    on_arm do
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.14/tlc3_Darwin_arm64.tar.gz"
+      sha256 "6ce563a304534dd0fa8d41dcb5c8c41b15cf370d8b6ab7c34c7b5b218029e790"
 
       def install
         bin.install "tlc3"
@@ -28,20 +28,24 @@ class Tlc3 < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.12/tlc3_Linux_arm64.tar.gz"
-      sha256 "3da2ab17b37ed2cca26b72d6d795dd1dc5bf82885879c5e88c6641b395827386"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.14/tlc3_Linux_x86_64.tar.gz"
+        sha256 "3952f5fc68aff0a58460e3af73d1f8a8babfdc4ae0c8f0fe12781e7852ce448e"
 
-      def install
-        bin.install "tlc3"
+        def install
+          bin.install "tlc3"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.12/tlc3_Linux_x86_64.tar.gz"
-      sha256 "59f8ac1c9b9f7facb9b43461b59a5e3c7a4e1e185d5b7ea8e5f6ff850345f006"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/nekrassov01/tlc3/releases/download/v0.0.14/tlc3_Linux_arm64.tar.gz"
+        sha256 "6527884a901b30dc13fc42485f42ddc3c33d3e86ecc321b79b580f08664417bc"
 
-      def install
-        bin.install "tlc3"
+        def install
+          bin.install "tlc3"
+        end
       end
     end
   end

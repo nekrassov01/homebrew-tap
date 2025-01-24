@@ -5,21 +5,21 @@
 class Llcm < Formula
   desc "AWS log groups lifecycle manager"
   homepage "https://github.com/nekrassov01/llcm"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/llcm/releases/download/v0.0.7/llcm_Darwin_x86_64.tar.gz"
-      sha256 "1f35f0f9a8d359020fe1ab6316fb729016a8beaf7a6c9a05e77b1af288634e09"
+      url "https://github.com/nekrassov01/llcm/releases/download/v0.0.8/llcm_Darwin_x86_64.tar.gz"
+      sha256 "186529aa443cf03207f21cf74bf4dc714edc766c3b81908fb270d63b58158ae8"
 
       def install
         bin.install "llcm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/llcm/releases/download/v0.0.7/llcm_Darwin_arm64.tar.gz"
-      sha256 "bbf7482a4c8f581e30f0c62c6bbf1aa90cec0d22c1937d2a5b370b23fbc249eb"
+      url "https://github.com/nekrassov01/llcm/releases/download/v0.0.8/llcm_Darwin_arm64.tar.gz"
+      sha256 "cd6886b3c657bd67e95bcaceeab1afcad84a9dfb374d311572eff68182c42f45"
 
       def install
         bin.install "llcm"
@@ -30,8 +30,8 @@ class Llcm < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/nekrassov01/llcm/releases/download/v0.0.7/llcm_Linux_x86_64.tar.gz"
-        sha256 "076f54132fc27700e7b9e3926145172f1472cd88933ba4922b19efeebd47baf9"
+        url "https://github.com/nekrassov01/llcm/releases/download/v0.0.8/llcm_Linux_x86_64.tar.gz"
+        sha256 "27784896575b85bad59ebff5c754f2a11195a62f8443c4d29ad2bb779a504fdd"
 
         def install
           bin.install "llcm"
@@ -40,8 +40,8 @@ class Llcm < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/nekrassov01/llcm/releases/download/v0.0.7/llcm_Linux_arm64.tar.gz"
-        sha256 "2020df5ebe4cc36c825f154d8321d82873235b8b02680f901c3ed0b38ac7eb02"
+        url "https://github.com/nekrassov01/llcm/releases/download/v0.0.8/llcm_Linux_arm64.tar.gz"
+        sha256 "e89681b7bfa1b363925fdcfd58b7dadbb2fa152b692e9d7f34effd3a15c93a72"
 
         def install
           bin.install "llcm"

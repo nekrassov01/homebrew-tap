@@ -5,21 +5,21 @@
 class S3bytes < Formula
   desc "S3 size checker CLI"
   homepage "https://github.com/nekrassov01/s3bytes"
-  version "0.0.11"
+  version "0.0.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.11/s3bytes_Darwin_x86_64.tar.gz"
-      sha256 "b821d272ab879b2036d4a48f4f4d93ba57a014b9d47facd794e6cfcb7f4e0edb"
+      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.12/s3bytes_Darwin_x86_64.tar.gz"
+      sha256 "749fcc45259ee069748c48eca01c5fe69fbed3325d45d16305ef6d1e0e886d3f"
 
       def install
         bin.install "s3bytes"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.11/s3bytes_Darwin_arm64.tar.gz"
-      sha256 "d848fa23e43e98d80775aad706665fd7cb5748e3e289079762266ce60ceb9424"
+      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.12/s3bytes_Darwin_arm64.tar.gz"
+      sha256 "aa007add33874bbe840f8929305e2ba1f3a6e483ce3778b7fad81eef0223ce30"
 
       def install
         bin.install "s3bytes"
@@ -30,8 +30,8 @@ class S3bytes < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.11/s3bytes_Linux_x86_64.tar.gz"
-        sha256 "bf5b65c6c90c77f3bcbe73bc57a3507840e7d3b2f3c2661d39e75243be29fe9d"
+        url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.12/s3bytes_Linux_x86_64.tar.gz"
+        sha256 "f00403e74ee0f4beb13b7681dcdd42a63fb3fd95e928e409622314a266365655"
 
         def install
           bin.install "s3bytes"
@@ -40,8 +40,8 @@ class S3bytes < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.11/s3bytes_Linux_arm64.tar.gz"
-        sha256 "7ebc5fef57bf32eb69a02a6112b78fd208d9eada4200247070811b11a9214810"
+        url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.12/s3bytes_Linux_arm64.tar.gz"
+        sha256 "60c054ee8497d0388f84e083a78499cbdd923033205b154e87c7e2acbe3a9220"
 
         def install
           bin.install "s3bytes"

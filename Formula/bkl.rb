@@ -11,7 +11,7 @@ class Bkl < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/nekrassov01/backlog-utils/releases/download/v0.0.1/bkl_Darwin_x86_64.tar.gz"
-      sha256 "59fd0a7c68f69758f1df467eb30064972721b044e97800e6b2250dcaeaa8b170"
+      sha256 "80531e6aa82cd5a6b3a918d82b0a4c16fc2a1516251784c0087ef6e2d0008742"
 
       def install
         bin.install "bkl"
@@ -19,7 +19,7 @@ class Bkl < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/nekrassov01/backlog-utils/releases/download/v0.0.1/bkl_Darwin_arm64.tar.gz"
-      sha256 "598d3ebbf74cc1dbcb3a561fa398570d56d9f5f52b9171f2d766ccad53a954dc"
+      sha256 "8523de96adb91f828baa2ac8176853c2170f01f187cbd26f13dfa43666d6b3e3"
 
       def install
         bin.install "bkl"
@@ -31,7 +31,7 @@ class Bkl < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/nekrassov01/backlog-utils/releases/download/v0.0.1/bkl_Linux_x86_64.tar.gz"
-        sha256 "6f098f49f0489f765306bc7e5b9a132ba8ee1c8016edc9030c0558237387f204"
+        sha256 "5b7b11c5da6c079b9991e9e7f6e871dbcdad7e585645ea4db8608082f50a7ac5"
 
         def install
           bin.install "bkl"
@@ -41,7 +41,7 @@ class Bkl < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/nekrassov01/backlog-utils/releases/download/v0.0.1/bkl_Linux_arm64.tar.gz"
-        sha256 "4ff2ccb5ac6539a8b3656937b192c05397ea27dd01b22b02ee8a84a942ce4ce6"
+        sha256 "1c8f16d6ffccbbdec964562407a0849c906126515fe96a60585c01ef8226fd59"
 
         def install
           bin.install "bkl"

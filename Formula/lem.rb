@@ -11,7 +11,7 @@ class Lem < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/nekrassov01/lem/releases/download/v0.0.1/lem_Darwin_x86_64.tar.gz"
-      sha256 "cf28ef706cdb8218c4409ca7d095a426834fe43d5dbf413f86a374da02ae6b77"
+      sha256 "6eb859ea032e2351c8f607c8d5ea1c9d51f245dd58b6f8ef2b465461ae79b919"
 
       def install
         bin.install "lem"
@@ -19,7 +19,7 @@ class Lem < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/nekrassov01/lem/releases/download/v0.0.1/lem_Darwin_arm64.tar.gz"
-      sha256 "3dece43f7eb01e4664bef00c8c25d159509e53a52853ceb53c6234883b0b3db4"
+      sha256 "e7260158a95e814752abe97f8e14d5a413424f96755ec836c2fa7889f5c598d4"
 
       def install
         bin.install "lem"
@@ -30,14 +30,14 @@ class Lem < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/nekrassov01/lem/releases/download/v0.0.1/lem_Linux_x86_64.tar.gz"
-      sha256 "d6782a7d5e439f4f5304a760b9986c30eeb5d9e4f3aff96800297202a2d22255"
+      sha256 "6ee48e93db72f907d7618dd5ecc7ec2c43136b32bd811ab3c41e556fe106e8f3"
       def install
         bin.install "lem"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/nekrassov01/lem/releases/download/v0.0.1/lem_Linux_arm64.tar.gz"
-      sha256 "649e84870f2fef4226639f234b7741aa7d2d30ddf3634e5f7fb3dda7bdb89c92"
+      sha256 "69acd496bfc1c99c41820dad068d001ae005830d4dec928fc0b4ee2d52ea3d5a"
       def install
         bin.install "lem"
       end

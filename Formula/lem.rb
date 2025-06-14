@@ -5,21 +5,21 @@
 class Lem < Formula
   desc "The env splitting, delivery, replacement, and monitoring tool for monorepo"
   homepage "https://github.com/nekrassov01/lem"
-  version "0.0.3"
+  version "0.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.3/lem_Darwin_x86_64.tar.gz"
-      sha256 "0758c96f6b1ac63450c196ccf1441d069ffd7840bb3f8ca51f4ebe63963ba748"
+      url "https://github.com/nekrassov01/lem/releases/download/v0.0.4/lem_Darwin_x86_64.tar.gz"
+      sha256 "4c5b3befd01b2ff5a3f6e7bd0896001414c7b6298abd01d1e8c2096ac8b95115"
 
       def install
         bin.install "lem"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.3/lem_Darwin_arm64.tar.gz"
-      sha256 "8efa76792469d32db3006afb509c783859ed598018198a4c3da8724510b55503"
+      url "https://github.com/nekrassov01/lem/releases/download/v0.0.4/lem_Darwin_arm64.tar.gz"
+      sha256 "fdccbbd6f4546a075e2ba3d51c07081e6cc528e68220df00f656fe44862732a2"
 
       def install
         bin.install "lem"
@@ -29,15 +29,15 @@ class Lem < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.3/lem_Linux_x86_64.tar.gz"
-      sha256 "ce1d1ebb5bb981007d60eeaec40537bf28d86838766abe61b43e1c2cada98a55"
+      url "https://github.com/nekrassov01/lem/releases/download/v0.0.4/lem_Linux_x86_64.tar.gz"
+      sha256 "743a2b93fa1127b08f8cd187d1c7e5ff2f0920ad8bea1e6ddff463b3fd250571"
       def install
         bin.install "lem"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.3/lem_Linux_arm64.tar.gz"
-      sha256 "1195003bf682f22dcdc493b6d70794e064f03f999e420b9f99ccc08d55fe8cbc"
+      url "https://github.com/nekrassov01/lem/releases/download/v0.0.4/lem_Linux_arm64.tar.gz"
+      sha256 "820dc0ade7e476f56fa7c1e95ae16498f04aefe63a079fa2ff553378ddc37cf1"
       def install
         bin.install "lem"
       end

@@ -5,21 +5,21 @@
 class Llcm < Formula
   desc "AWS log groups lifecycle manager"
   homepage "https://github.com/nekrassov01/llcm"
-  version "0.0.16"
+  version "0.0.17"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/llcm/releases/download/v0.0.16/llcm_Darwin_x86_64.tar.gz"
-      sha256 "9a424a750b9a8bfa236463cf806d56c447bec0e9f5ce21d29e512e0b2ea0fe94"
+      url "https://github.com/nekrassov01/llcm/releases/download/v0.0.17/llcm_Darwin_x86_64.tar.gz"
+      sha256 "ce0e1265b324f95f58692a809f00084fea2a49e394f2d681237de531ec8f2336"
 
       def install
         bin.install "llcm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/llcm/releases/download/v0.0.16/llcm_Darwin_arm64.tar.gz"
-      sha256 "d9997a3ea05c4136fe13a6b617633cb966b1e988b295190b0cf6332cb75f384a"
+      url "https://github.com/nekrassov01/llcm/releases/download/v0.0.17/llcm_Darwin_arm64.tar.gz"
+      sha256 "55a8f9484396bbb4e063e9b5e6ffb3134f111846904ba7a0de7a853c4861da10"
 
       def install
         bin.install "llcm"
@@ -28,24 +28,18 @@ class Llcm < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/nekrassov01/llcm/releases/download/v0.0.16/llcm_Linux_x86_64.tar.gz"
-        sha256 "be4edd9618ad2a9a05e6e42dfe1cab0d9ecd97e89f46e8624b0d0900e5dd5f88"
-
-        def install
-          bin.install "llcm"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/nekrassov01/llcm/releases/download/v0.0.17/llcm_Linux_x86_64.tar.gz"
+      sha256 "24d4c186d0a5769acc4c4646267e77517c4efdb859ef6142d1e96c494c6b171e"
+      def install
+        bin.install "llcm"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/nekrassov01/llcm/releases/download/v0.0.16/llcm_Linux_arm64.tar.gz"
-        sha256 "9b5f1fe2bed8aaf71b604129a0687cad0051550065e4a1646c3349c51ad8d83c"
-
-        def install
-          bin.install "llcm"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/nekrassov01/llcm/releases/download/v0.0.17/llcm_Linux_arm64.tar.gz"
+      sha256 "e75665e49f6929935e47bd506cf66054643715803c42435d44a67d82dc030b5b"
+      def install
+        bin.install "llcm"
       end
     end
   end

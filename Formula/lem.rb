@@ -5,21 +5,21 @@
 class Lem < Formula
   desc "The env splitting, delivery, replacement, and monitoring tool for monorepo"
   homepage "https://github.com/nekrassov01/lem"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.7/lem_Darwin_x86_64.tar.gz"
-      sha256 "7f96cd5687532aacea0d09117a2662ff09907ba26916161043a944bd157faeeb"
+      url "https://github.com/nekrassov01/lem/releases/download/v0.0.8/lem_Darwin_x86_64.tar.gz"
+      sha256 "39347652bbfd26170268b6d2dd4f6a0b6c7ab31d0d5cea044352555e87481f6f"
 
       def install
         bin.install "lem"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.7/lem_Darwin_arm64.tar.gz"
-      sha256 "287bfda5f124bbc24e68cd3091b6be5762e5783150bf5a4ad8319395bc1809ca"
+      url "https://github.com/nekrassov01/lem/releases/download/v0.0.8/lem_Darwin_arm64.tar.gz"
+      sha256 "fb78aec762b2380e19fb4c63380a31070ea3c93952767dcf310159ec659ab6df"
 
       def install
         bin.install "lem"
@@ -28,16 +28,16 @@ class Lem < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.7/lem_Linux_x86_64.tar.gz"
-      sha256 "3072e4c18c6d53822307619b4f59e9d455098a93f2f4283a9a5559b19d67eee9"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nekrassov01/lem/releases/download/v0.0.8/lem_Linux_x86_64.tar.gz"
+      sha256 "384dabc7c3063ccef871ced8d47b096966e488326ee3b5e91361d8c94d0ece87"
       def install
         bin.install "lem"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.7/lem_Linux_arm64.tar.gz"
-      sha256 "fe2728bc8d5006e70335ffc074ae89a37076e18aada9e4e83f3115fa21a69808"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/nekrassov01/lem/releases/download/v0.0.8/lem_Linux_arm64.tar.gz"
+      sha256 "01d00f121d2dee63fa054699e169a3b8d8061b463638470a68ea70694f9176b1"
       def install
         bin.install "lem"
       end

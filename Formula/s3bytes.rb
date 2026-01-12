@@ -5,21 +5,21 @@
 class S3bytes < Formula
   desc "S3 size checker CLI"
   homepage "https://github.com/nekrassov01/s3bytes"
-  version "0.0.15"
+  version "0.0.16"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.15/s3bytes_Darwin_x86_64.tar.gz"
-      sha256 "e35fd1e2c67f1653f461697169c1a4e1dc22349212581c5e134f67dbde10de8f"
+      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.16/s3bytes_Darwin_x86_64.tar.gz"
+      sha256 "6717e81c1afad143474c837130b6eec96fb07d69db9c9ea8ae6f4301ef92c643"
 
       def install
         bin.install "s3bytes"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.15/s3bytes_Darwin_arm64.tar.gz"
-      sha256 "0840206e394642f736123bf168f57d2802ceb303d548066a72df0710df27d228"
+      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.16/s3bytes_Darwin_arm64.tar.gz"
+      sha256 "fcda6f2b2729037c79969ed5e9a5a094a328dcdd5ca96d99637945c422c1e696"
 
       def install
         bin.install "s3bytes"
@@ -29,15 +29,15 @@ class S3bytes < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.15/s3bytes_Linux_x86_64.tar.gz"
-      sha256 "18bf78ba15dc7b3a014ed8ac4b0cd361c41ecd7f8fa8dbd434fd58c3f7c03016"
+      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.16/s3bytes_Linux_x86_64.tar.gz"
+      sha256 "37852c13d46d4f66c553439f502cdf406c1c6d780d185c4572852afce1f7c17a"
       def install
         bin.install "s3bytes"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.15/s3bytes_Linux_arm64.tar.gz"
-      sha256 "40420034f2a7ae449222509749753b0596631bd72c94e32cec618929b841052f"
+      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.0.16/s3bytes_Linux_arm64.tar.gz"
+      sha256 "6d9413a0c4c429dee101d82837bfd480fa0c34c185071ad874c6014a2f5c9d0f"
       def install
         bin.install "s3bytes"
       end

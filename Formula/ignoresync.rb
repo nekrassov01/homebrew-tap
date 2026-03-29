@@ -11,7 +11,7 @@ class Ignoresync < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.1/ignoresync_0.0.1_Darwin_x86_64.tar.gz"
-      sha256 "fca6188d98df4d1d359a550749a8c6c57662ae833bffe540af35ac2878393ffc"
+      sha256 "38e3b9458ed74f63db9a17e920fc3c39b20ea051e4b4f77bcc914ceaf1298eda"
 
       define_method(:install) do
         bin.install "ignoresync"
@@ -19,7 +19,7 @@ class Ignoresync < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.1/ignoresync_0.0.1_Darwin_arm64.tar.gz"
-      sha256 "a501847f3501de85bd3c519a8e8124388c130daed8a8ff5df11142f7d7be99a6"
+      sha256 "9f1f7454f71c608747216359a2cb5a5e33c6cb6dca5741f8c53931c43eb88570"
 
       define_method(:install) do
         bin.install "ignoresync"
@@ -30,14 +30,14 @@ class Ignoresync < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.1/ignoresync_0.0.1_Linux_x86_64.tar.gz"
-      sha256 "a6db88514620d031dfa0fa3f40ca9ae6cafe42abdd5ebef717c4f27c6cdc2f89"
+      sha256 "33ab6209fbcbc2bcef8db7de36c0829a169d7ef919fbdf506103138f71195006"
       define_method(:install) do
         bin.install "ignoresync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.1/ignoresync_0.0.1_Linux_arm64.tar.gz"
-      sha256 "2474fdf1c0b2588367940b73d1cf73e0dec5d80784e486cfac02211355ab04cb"
+      sha256 "040fea608e44b38c0d7148c2ab536c4015e9a15d7c05993ed84d2e9666e35bcb"
       define_method(:install) do
         bin.install "ignoresync"
       end

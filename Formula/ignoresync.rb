@@ -5,21 +5,21 @@
 class Ignoresync < Formula
   desc "Your shadow repository for ignored files"
   homepage "https://github.com/nekrassov01/ignoresync"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.4/ignoresync_0.0.4_Darwin_x86_64.tar.gz"
-      sha256 "9122b7ef7a8d80bdbfb76b46b5256219899f3a6c3d10b2837c821a6c8e2b460e"
+      url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.5/ignoresync_0.0.5_Darwin_x86_64.tar.gz"
+      sha256 "71f2ad4fcd18aaba2ec5687b3acfefe488351d720f3162c36ac85f65c2bf5df3"
 
       define_method(:install) do
         bin.install "ignoresync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.4/ignoresync_0.0.4_Darwin_arm64.tar.gz"
-      sha256 "0e5bc51463b38b9555a0f83d81a87fb6f40e6e2f9c5c918b8ad98c3696c94efc"
+      url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.5/ignoresync_0.0.5_Darwin_arm64.tar.gz"
+      sha256 "052f766326dbfe417718456ee4e8c9bdc868e9b614d89c0086bed9508de9d0b9"
 
       define_method(:install) do
         bin.install "ignoresync"
@@ -29,15 +29,15 @@ class Ignoresync < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.4/ignoresync_0.0.4_Linux_x86_64.tar.gz"
-      sha256 "4f81d70f8c0c7aa475adebc3e69ab20532cc45a40e6194fbc0d1c62eb29d88d9"
+      url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.5/ignoresync_0.0.5_Linux_x86_64.tar.gz"
+      sha256 "3b8b5c222b805b55b9dcf6277a8c5071c0ad661f1073f5545c24a8a375b73384"
       define_method(:install) do
         bin.install "ignoresync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.4/ignoresync_0.0.4_Linux_arm64.tar.gz"
-      sha256 "3827634f129c6bea0d0947e760b930a3c5155196aeac816da1a6d16c1d59059b"
+      url "https://github.com/nekrassov01/ignoresync/releases/download/v0.0.5/ignoresync_0.0.5_Linux_arm64.tar.gz"
+      sha256 "80adee990878a5f5b10fdbfac9851bd6354ce1fc63c4646b31a7d2c33a579f12"
       define_method(:install) do
         bin.install "ignoresync"
       end

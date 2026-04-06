@@ -5,21 +5,21 @@
 class Tlc3 < Formula
   desc "TLS cert checker CLI"
   homepage "https://github.com/nekrassov01/tlc3"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.1.0/tlc3_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "30f7d020c8a9aa55f6d99fbdc2dc65bf0f53c8924366593af3a3cae90de476cc"
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.1.1/tlc3_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "d02ca29b46ccd6f27b79b37c5a810041b6081f8f5d79da468edaa11d523c4b0d"
 
       define_method(:install) do
         bin.install "tlc3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.1.0/tlc3_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "94c636def857309213e5f28302b87c0352ebe0732a103db7456c40db8917283b"
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.1.1/tlc3_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "1485e033a1d4a579bfdcc761ca4810c0ee5c3bad9bdde2a202d728db59dcf1f3"
 
       define_method(:install) do
         bin.install "tlc3"
@@ -29,15 +29,15 @@ class Tlc3 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.1.0/tlc3_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "c9f1b37cbbb5e8fa2b318b7117bb87d2029882cb4f16dff2132768e29546739b"
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.1.1/tlc3_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "2b13c7142816d6a9f79cb21eed9bddcff855ba88df3a0bdbe9678d8682639413"
       define_method(:install) do
         bin.install "tlc3"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/tlc3/releases/download/v0.1.0/tlc3_0.1.0_Linux_arm64.tar.gz"
-      sha256 "9099533488f47ec04e7285a081bc953fd2f2586b50f5f96aa90a2a30c0063a85"
+      url "https://github.com/nekrassov01/tlc3/releases/download/v0.1.1/tlc3_0.1.1_Linux_arm64.tar.gz"
+      sha256 "ff238d5350d69ce923b60ee920357fae1418148d16c1a227edeb1a1d22335fbb"
       define_method(:install) do
         bin.install "tlc3"
       end

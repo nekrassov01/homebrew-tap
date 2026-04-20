@@ -5,23 +5,23 @@
 class Lem < Formula
   desc "The env splitting, delivery, replacement, and monitoring tool for monorepo"
   homepage "https://github.com/nekrassov01/lem"
-  version "0.0.9"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.9/lem_Darwin_x86_64.tar.gz"
-      sha256 "be6073c8bad8414da7c3368d4e9091247d279d183ff06bcaa3db5d2e0cd268c0"
+      url "https://github.com/nekrassov01/lem/releases/download/v0.1.0/lem_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "71b506b2f420ff8ceb362a3c3f4711c7d33ff69feac842d1d88ab43d04f566b6"
 
-      def install
+      define_method(:install) do
         bin.install "lem"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.9/lem_Darwin_arm64.tar.gz"
-      sha256 "2c5ce655056d0b619029c2fcd9d9850d4a7abe875d5b845ed994caa7be22efb3"
+      url "https://github.com/nekrassov01/lem/releases/download/v0.1.0/lem_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "cc4e037e92b82ea816e1ed4c0b750d225014112d969f9793bdc0229eb58e358b"
 
-      def install
+      define_method(:install) do
         bin.install "lem"
       end
     end
@@ -29,16 +29,16 @@ class Lem < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.9/lem_Linux_x86_64.tar.gz"
-      sha256 "3cc822fc7beb9b7bf412136e9af7def43f9bdf97ea6c818e2df98776273a118d"
-      def install
+      url "https://github.com/nekrassov01/lem/releases/download/v0.1.0/lem_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "6997f003f5e0d42041028ece59110f7152b3ae43b1d484e90fc4a4ce863c43f0"
+      define_method(:install) do
         bin.install "lem"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/lem/releases/download/v0.0.9/lem_Linux_arm64.tar.gz"
-      sha256 "f999fa467d8087d3e3de38217c0bb0199a7a4d0adfccc8b9bb498e39c463440e"
-      def install
+      url "https://github.com/nekrassov01/lem/releases/download/v0.1.0/lem_0.1.0_Linux_arm64.tar.gz"
+      sha256 "34827851b082a3fdd7c5d16ebcd10aab2ed73c1963ff48bb88f74e2b584f5021"
+      define_method(:install) do
         bin.install "lem"
       end
     end

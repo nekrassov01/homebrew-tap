@@ -5,21 +5,21 @@
 class S3bytes < Formula
   desc "S3 size checker CLI"
   homepage "https://github.com/nekrassov01/s3bytes"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.1.1/s3bytes_0.1.1_Darwin_x86_64.tar.gz"
-      sha256 "2f38192439fa3664de97898101cb3a65122827aa3b5e19d49724380ec502b955"
+      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.1.2/s3bytes_0.1.2_Darwin_x86_64.tar.gz"
+      sha256 "f298148776b68e7f88746715be72c8b816d4c9378188ce8c56566b855c83e1ca"
 
       define_method(:install) do
         bin.install "s3bytes"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.1.1/s3bytes_0.1.1_Darwin_arm64.tar.gz"
-      sha256 "e402d37a516c5f531eb135969b9cac4aed0fb92db49c6cf4ea1d368d1a4b2967"
+      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.1.2/s3bytes_0.1.2_Darwin_arm64.tar.gz"
+      sha256 "e66f661712603fbd6104bcd3ee17e538abaf52807bfb3d7a5268240ed5f20a94"
 
       define_method(:install) do
         bin.install "s3bytes"
@@ -29,15 +29,15 @@ class S3bytes < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.1.1/s3bytes_0.1.1_Linux_x86_64.tar.gz"
-      sha256 "5537a41d1d9a62531b9be94335f882f223f689b0375d0105ba42046aef70369c"
+      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.1.2/s3bytes_0.1.2_Linux_x86_64.tar.gz"
+      sha256 "6344012aad5bc8c84e3898f625853e083a9b764ce5f6d0f74beda129f611275e"
       define_method(:install) do
         bin.install "s3bytes"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.1.1/s3bytes_0.1.1_Linux_arm64.tar.gz"
-      sha256 "407d3cba85278ae77742a85c581a8998a0d0eed5fc22119d15efb1e4ebe9b094"
+      url "https://github.com/nekrassov01/s3bytes/releases/download/v0.1.2/s3bytes_0.1.2_Linux_arm64.tar.gz"
+      sha256 "14824a30f360ab3a9075ae91cbaefecccc1fcbd623adda76a2a919cafa426dae"
       define_method(:install) do
         bin.install "s3bytes"
       end
